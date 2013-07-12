@@ -1,0 +1,12 @@
+Function scope & context
+object, assign objects as attributes
+Functions, Arrays, Date are objects
+the context of 'this'
+stand alone or inner functions 'this' is a global object, in methods 'this' is the parent object
+assigning objects functions to variables and running them will overwrite global variables***
+demo 'new' by making function and assigning it's prototype to an object
+show the danger of forgetting to write 'new' when instantiating objects, abstract instantiation to Object.prototype
+revisit Functions, Arrays, Date as objects (prototypes of Function, Array, etc. constructor functions)
+add prototype methods to objects used by constructors
+storing/passing functions as arguments
+.bind and .call

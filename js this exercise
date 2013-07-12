@@ -1,0 +1,21 @@
+o = {
+
+  firstthis: function() {
+    console.log(this)
+  },
+  nextthis: function() {
+    console.log(this)
+  },
+  inner: {
+    secondthis: function() {
+      console.log(this)
+    },
+    innertimeout: function() {
+      setTimeout(function() {
+        console.log(this);
+      },1000);
+    }
+  },
+
+
+}
