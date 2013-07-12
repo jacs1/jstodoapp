@@ -1,7 +1,7 @@
-//Use the beget code to clone elements, like the todo item objects
+//Use the create code to clone elements, like the todo item objects
 //this avoids using 'new' on a constructor function, for reference see ch3 of Douglas Crockford's "JavaScript: The Good Parts"
-if (typeof Object.beget !== 'function') {
-	Object.beget = function (o) {
+if (typeof Object.create !== 'function') {
+	Object.create = function (o) {
 		var F = function () {};
 		F.prototype = o;
 		return new F();
@@ -22,8 +22,8 @@ var todoApp = {
 	},
 	//this method is called when a user wants to add a new todo item
 	append_item: function(){
-		//first it makes a clone of the todoItem using the beget() method we defined above
-		var newTask = Object.beget(todoItem);
+		//first it makes a clone of the todoItem using the create() method we defined above
+		var newTask = Object.create(todoItem);
 		//next it sets the task using newTask's setTaskText() method
 		newTask.setTaskText();
 		//we don't want to add blank tasks
